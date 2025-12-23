@@ -1,0 +1,262 @@
+/* --- General Reset & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a; /* Dark Blue */
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* --- Grid Layout System --- */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px; /* Stacks on small screens */
+    max-width: 380px;
+}
+
+/* =========================================
+   SECTION 1: Interactive Events
+   ========================================= */
+.section-events {
+    background-color: #fff;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Simulating the screenshots */
+.img-1 { background: url('https://via.placeholder.com/400x250/ccc/666?text=Workshops+Image') center/cover; }
+.img-2 { background: url('https://via.placeholder.com/400x250/ccc/666?text=Social+Mixer+Image') center/cover; }
+.img-3 { background: url('https://via.placeholder.com/400x250/ccc/666?text=Career+Fair+Image') center/cover; }
+
+.card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.event-desc {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.learn-more {
+    color: #16a34a; /* Green link color */
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.learn-more:after {
+    content: '→';
+    margin-left: 5px;
+}
+
+/* =========================================
+   SECTION 2: Connect Grow Lead
+   ========================================= */
+.section-principles {
+    background: linear-gradient(135deg, #2563eb, #06b6d4); /* Blue Gradient */
+    color: white;
+    padding: 80px 20px;
+}
+
+.section-principles h2 {
+    color: white;
+}
+
+.section-principles .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.principle-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 40px 25px;
+    text-align: center;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.principle-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.principle-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================
+   SECTION 3: Digital Platform
+   ========================================= */
+.section-platform {
+    background-color: #ffffff;
+}
+
+.platform-card {
+    background-color: #f0f9ff; /* Very Light Blue background */
+    border-radius: 16px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0f2fe;
+}
+
+.platform-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #2563eb;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.platform-title {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.platform-desc {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.platform-list {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    list-style: none;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.platform-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+.platform-list li::before {
+    content: '•';
+    color: #2563eb; /* Blue bullet */
+    font-size: 1.5rem;
+    line-height: 0;
+    margin-right: 10px;
+}
+
+.btn-explore {
+    background-color: #1d4ed8; /* Blue Button */
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: background 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: #1e40af;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .row { flex-direction: column; align-items: center; }
+    .col { max-width: 100%; width: 100%; }
+}

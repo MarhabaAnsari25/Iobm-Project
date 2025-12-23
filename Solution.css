@@ -1,0 +1,150 @@
+*{ background-color:#F6FAFF;
+        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+ } 
+
+.loki,.loki1{
+        display: flex;               /* enables flexbox */
+    flex-direction: column;      /* stack sec-1 and sec-2 vertically */
+    align-items: center;         /* centers child divs horizontally */
+    justify-content: center;     /* optional: centers vertically if you give main height */
+    gap:5px;                   /* spacing between sec-1 and sec-2 */
+    min-height: 80vh; 
+        width: 100%;
+    padding: 20px;
+}
+
+
+#h2-2,#h5-1{ 
+    text-align: center; 
+    color:#858585; 
+    margin-top: 0;
+    margin-bottom:5px;       /* remove top margin */
+    
+ 
+} 
+
+#h2-2{
+    font-size: 36px;
+    margin-bottom: 10px;
+    color:#1C398E;
+}
+
+#h5-1 {
+    font-size: 24px;
+      margin-bottom: 15px;
+}
+
+
+.sec-1,.sec-2{ 
+    display: flex; 
+    flex-direction: column; 
+    gap:20px; 
+        width: 90%;
+    max-width: 900px;
+    
+} 
+
+.sec-2 .div2-1{
+    background-color: #F0FAFA;
+    border:solid #4d9191;
+}
+
+.sec-1 .div1-1{
+    background-color: #F0FAFA;
+    border:solid #4d9191;
+}
+
+
+
+#k{ 
+    margin-right: 10px;
+     gap: 10px;  
+}
+    
+    
+
+.div1-1,.div2-1 { 
+    display: flex; 
+    align-items: center;
+     gap: 20px; 
+     height:fit-content;
+      border: double black; /* space between logo and text */
+      border-radius: 15px;
+      padding: 20px; 
+
+
+    } 
+
+.div1-1 .images-1 {
+    width: 80px;
+    height: auto;
+}
+
+.div2-1 .images-1 {
+    width: 60px;
+    height: 60px;
+}
+
+
+.text-box { 
+    display: flex; 
+    flex-direction: column; /* text goes top → bottom */ 
+    line-height: 1.5; 
+    color:#858585;
+    
+        width: 100%;
+    min-width: 300px;
+ } 
+
+
+.h5-1,.h5-2 { 
+    font-size: 22px;
+     font-weight: bold;
+      color:#858585;
+      margin-bottom: 8px; 
+    } 
+
+.Para-1, .Para-2 {
+    font-size: 18px;      /* bigger text */
+    color:#858585;
+    line-height: 1.6;
+}
+
+.main{ 
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .sec-1, .sec-2 {
+        max-width: 90%;     /* shrink section width */
+    }
+    .text-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .div1-1, .div2-1 {
+        flex-direction: column;  /* stack image and text */
+        align-items: center;
+        gap: 10px;
+    }
+    .images-1 {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sec-1, .sec-2 {
+        gap: 8px;           /* reduce gap between divs */
+    }
+    .text-box {
+        font-size: 14px;    /* slightly smaller text for mobiles */
+    }
+}
+
+
+

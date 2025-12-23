@@ -1,0 +1,112 @@
+/* Global styles */
+* {
+    background-color: rgba(246, 246, 239, 0.901);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2, #h5-1 {
+    text-align: center;
+    color: #532128;
+    margin-top: 0;
+    margin-bottom: 5px; /* small space below headings */
+}
+
+/* Main wrapper */
+.loki, .loki1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;          /* spacing between sections */
+    width: 100%;
+    padding: 20px;
+}
+
+/* Horizontal containers for divs/images */
+.loki1, #div-img {
+    display: flex;
+    flex-wrap: wrap;       /* allows divs to move to next line on small screens */
+    gap: 20px;             /* spacing between divs */
+    justify-content: center;
+}
+
+/* Sections */
+.sec-1, .sec-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;      /* limits width on large screens */
+}
+
+/* Individual boxes */
+.div1-1, .div2-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: double black;
+    padding: 10px;
+    border-radius: 10px;   /* rounded corners */
+    width: 100%;
+    max-width: 280px;       /* ensures equal size */
+    height: fit-content;
+    flex-direction: column; /* stack content vertically on small screens */
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Images */
+.images-1 {
+    width: 50px;
+    height: auto;
+}
+
+.div2-1 .images-1 {
+    width: 30px;
+    height: 30px;
+}
+
+/* Text inside divs */
+.text-box {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    color: #532128;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.h5-1, .h5-2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #532128;
+}
+
+.Para-1, .Para-2 {
+    font-size: 14px;
+    color: #532128;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .div1-1, .div2-1 {
+        max-width: 45%;   /* two divs side by side on tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    .div1-1, .div2-1 {
+        max-width: 90%;   /* stack vertically on small screens */
+        flex-direction: column;
+    }
+
+    .loki1, #div-img {
+        gap: 15px;        /* smaller spacing on small screens */
+    }
+
+    .sec-1, .sec-2 {
+        gap: 10px;
+    }
+}

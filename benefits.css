@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f4f9; 
+    padding: 40px 0;
+    min-height: 100vh; 
+}
+
+.benefits-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+header h1 {
+    
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1a202c; 
+    margin-bottom: 5px;
+}
+
+header p {
+    
+    font-size: 1.1em;
+    color: #6b7280; 
+    margin-bottom: 50px;
+}
+
+.benefit-group h2 {
+    
+    font-size: 2em;
+    font-weight: 600;
+    color: #1a202c;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+
+.cards-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 40px;
+}
+
+.benefit-card {
+    
+    flex: 0 0 calc(25% - 20px); 
+    min-width: 250px; 
+    background-color: white; 
+    border-radius: 12px; 
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+    cursor: pointer; 
+}
+
+
+.benefit-card:hover {
+   
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+
+.benefit-card h3 {
+    
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1a202c;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.benefit-card p {
+    
+    font-size: 0.9em;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+
+.icon-placeholder {
+   
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em; /* Size of the emoji icon */
+    margin-bottom: 10px;
+    border: 1px solid; 
+}
+
+
+.benefit-card.fresher .icon-placeholder {
+   
+    border-color: #e0e7ff; 
+    background-color: #f0f4ff; 
+    color: #4f46e5;
+}
+
+.benefit-card.fresher h3 {
+    color: #3b82f6; /* Blue heading */
+}
+
+
+
+.benefit-card.senior .icon-placeholder {
+    
+    border-color: #d1fae5; 
+    background-color: #f0fdf4; 
+    color: #10b981;
+}
+
+.benefit-card.senior h3 {
+    color: #059669; /* Green heading */
+}
+
+
+@media (max-width: 1200px) {
+    .benefit-card {
+        /* On medium screens, show 3 cards per row */
+        flex: 0 0 calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 850px) {
+    .benefit-card {
+        /* On smaller screens, show 2 cards per row */
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 550px) {
+    .benefit-card {
+        /* On very small screens, show 1 card per row */
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+}

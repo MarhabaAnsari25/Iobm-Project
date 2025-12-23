@@ -1,0 +1,249 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+     background-color: #F2F8FF;
+    color: #333;
+}
+
+.header {
+    background-color: white; 
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out logo and links */
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* New responsive style for the logo image */
+
+.logo-image {
+    
+    width:60px; /* Example width for the logo */
+    height: 60px;
+    color: #193CB8;
+    display: flex;   
+    margin-left: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem; /* Adjust the text size */
+    font-weight: 600; /* Makes the text slightly bold */
+    letter-spacing: -0.5px; /* Adjust spacing to match the compact look */
+}
+
+.nav-links {
+    display: none; /* Hide links by default (mobile-first approach) */
+}
+
+.nav-links a {
+    color: gray;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.9em;
+}
+
+.cta-button {
+    background-color:#155DFC; /* Blue button */
+    padding: 5px 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.mobile-menu-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* Simple Desktop View */
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: block;            /* Show links on desktop */
+    }
+    .mobile-menu-button {
+        display: none;              /* Hide menu button on desktop */
+    }
+}
+
+
+
+/* Main Hero ( About Section) */
+
+
+.hero-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+   
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        flex-direction: row; /* Side-by-side on desktop */
+        text-align: left;
+    }
+    .hero-text-area, .hero-image-area {
+        width: 50%;
+    }
+}
+
+.main-heading {
+    font-size: 2em;
+    color: #1C398E;
+font-family: 'Calibri', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.highlight-text {
+    color: #1C398E;
+}
+
+.hero-subtitle {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 4px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition-duration: 0.2s;
+}
+
+
+
+/* Basic colors for buttons */
+.student-button { background-color: #155DFC; }
+.mentor-button { background-color:#00A63E; }
+.alumni-button { background-color:#193CB8; }
+
+.student-button:hover{
+    
+    background-color: white;
+    color: #155DFC;
+}
+
+
+.mentor-button:hover{
+    
+    background-color: white;
+    color: #00A63E;
+}
+
+
+
+.alumni-button:hover{
+    
+    background-color: white;
+    color: #193CB8;
+}
+
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    
+}
+
+
+
+
+/* 3. The Challenge Section (Feature Cards) */
+
+
+.challenge-section {
+    text-align: center;
+    padding: 40px 20px;
+    
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    color: #3498db;
+    margin-bottom: 25px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    width: 100%; /* Full width on mobile */
+    max-width: 250px; /* Max width for desktop card */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+}
+
+/* Simple mobile layout for cards */
+@media (min-width: 600px) {
+    .feature-card {
+        width: 45%;
+    }
+}
+
+/* Desktop layout for cards */
+@media (min-width: 900px) {
+    .feature-card {
+        width: 30%;
+    }
+}
+
+/* Basic styling for the SVG icons (which are inline) */
+.card-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #1C398E;
+}
+
+.card-description{
+    color: gray;
+}
